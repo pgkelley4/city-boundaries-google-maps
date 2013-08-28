@@ -1,0 +1,31 @@
+/**
+ * CityLimits example.
+ * 
+ * Peter Kelley, pgkelley4@gmail.com 
+ */
+
+html, body, #map-canvas {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+#legend {
+	background: #FFF;
+	padding: 10px;
+	margin: 5px;
+	font-size: 12px;
+	font-family: Arial, sans-serif;
+}
+.color {
+	border: 1px solid;
+	height: 12px;
+	width: 12px;
+	margin-right: 3px;
+	float: left;
+}
+.colorFF0000 {
+	background: #FF0000;
+}
+.color0000FF {
+	background: #0000FF;
+}
