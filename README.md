@@ -1,6 +1,5 @@
 ## City Boundaries With Google Maps
 
-
 This is a small example web app to illustrate adding city boundaries
 (limits) to Google Maps. The city data is read from the OpenStreetMap
 Overpass API:
@@ -65,28 +64,30 @@ The OpenStreetMap Overpass API is a read-only API that provides OSM data.
 
 The relevant OpenStreetMap data is organized into relations, ways and nodes.
 
-Relation - http://wiki.openstreetmap.org/wiki/Relation
-Node - http://wiki.openstreetmap.org/wiki/Node
-Way - http://wiki.openstreetmap.org/wiki/Way
+* Relation - http://wiki.openstreetmap.org/wiki/Relation
+* Node - http://wiki.openstreetmap.org/wiki/Node
+* Way - http://wiki.openstreetmap.org/wiki/Way
 
 I find the relation, read its ways into memory and then add all their nodes 
 into our paths in the correct order.
 
 The Overpass QL is used to query the Overpass API. Because the OSM data is 
-incosistently labeled I have two sets of queries to find the correct area.
+incosistently labeled I have two sets of queries to find the correct area. 
+These could certainly be tweaked or added to as I know they don't work all 
+the time.
 
-Query directly for the area.
+Query directly for the area:
 ```
 area[name=%22" + cityName + "%22][%22is_in:state_code%22=%22" + stateName + "%22];foreach(out;);
 ```
 
 If that doesn't work also query for associated nodes, and print out each of
-their associated areas.
+their associated areas:
 ```
 node[name=%22" + cityName + "%22][%22is_in%22~%22" + stateName + "%22];foreach(out;is_in;out;);
 ```
 		
-To get the relation from its ID.
+To get the relation from its ID:
 ```
 (relation(" + relationID + ");>;);out;
 ```
@@ -94,7 +95,10 @@ To get the relation from its ID.
 ## Bugs
 
 The OpenStreetMap city boundary data is missing for some cities. Even some
-big ones like Los Angeles and Dallas.
+big ones like Los Angeles and Dallas. There isn't much I can do about this.
+
+Right now, this is more of a starting point, more work must be done to fix 
+the queries to get the data for cities that are available but are't found.
 
 There are still a few issues with drawing polygons as it seems to mess up
 occasionally. Currently, I am only aware of issues with San Antonio and I 
