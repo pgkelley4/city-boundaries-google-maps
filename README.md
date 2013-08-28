@@ -94,7 +94,7 @@ To get the relation from its ID:
 
 ## Notes
 
-This can handle cities that are made up of multiple polygons. For example
+This can handle cities that are made up of multiple polygons, for example
 New York, NY. It can also handle cities with holes in them, for example
 Detroit, MI.
 
