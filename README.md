@@ -108,7 +108,7 @@ big ones like Los Angeles and Dallas. There isn't much I can do about this.
 
 Right now, this is more of a starting point, more work must be done to fix 
 the queries to get the data for cities that are available but aren't found.
-An example of where the data is present but not found is Houston, TX.
+An example is Houston, TX.
 
 There are still a few issues with drawing polygons as it seems to mess up
 occasionally. Currently, I am only aware of issues with San Antonio and I 
