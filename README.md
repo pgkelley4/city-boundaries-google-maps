@@ -1,5 +1,5 @@
-City Boundaries With Google Maps
-=======================
+## City Boundaries With Google Maps
+
 
 This is a small example web app to illustrate adding city boundaries
 (limits) to Google Maps. The city data is read from the OpenStreetMap
@@ -7,32 +7,26 @@ Overpass API:
 
 http://wiki.openstreetmap.org/wiki/Overpass_API
 
-Breakdown
-=======================
+## Breakdown
 
 The JavaScript files used in this project are as follows:
 
-google.maps.Polygon.getBounds.js 
------------------------
+### google.maps.Polygon.getBounds.js 
 Polygon getBounds extension from google. Used to get the bounds of the
 final Polygon created for the cities boundaries and then zoom the map
 to that polygon.
 
-jquery-1.10.2.js
------------------------
+### jquery-1.10.2.js
 Used for AJAX queries.
 
-city-boundaries-googlemaps.js
------------------------
+### city-boundaries-googlemaps.js
 The main JavaScript file that finds the city boundaries and  displays 
 them on a Google Maps canvas. Creates a legend with the city entered.
 
-utility-functions.js
------------------------
+### utility-functions.js
 A few small utilities.
 
-relation-in-order.js
------------------------
+### relation-in-order.js
 This JavaScript gets the boundary relation specified and constructs an
 array of paths. These paths consists of the nodes that are latitude 
 and longitude points on the boundary.
@@ -60,14 +54,12 @@ contained within others. I wrote a script to do that here:
 
 https://github.com/pgkelley4/line-segments-intersect
 
-How to use
-=======================
+## How to use
 
 You must include all the Javascript files in the js folder in your HTML page.
 To run this example, download the project and open the index.html file.
 
-Overpass background and Overpass QL used
-=======================
+## Overpass background and Overpass QL used
 
 The OpenStreetMap Overpass API is a read-only API that provides OSM data.
 
@@ -99,8 +91,7 @@ To get the relation from its ID.
 (relation(" + relationID + ");>;);out;
 ```
 
-Bugs
-=======================
+## Bugs
 
 The OpenStreetMap city boundary data is missing for some cities. Even some
 big ones like Los Angeles and Dallas.
