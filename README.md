@@ -81,12 +81,14 @@ Query directly for the area:
 area[name=%22" + cityName + "%22][%22is_in:state_code%22=%22" + stateName + "%22];foreach(out;);
 ```
 
-If that doesn't work also query for associated nodes, and print out each of
-their associated areas:
+If that doesn't work also query for associated nodes, and return each node's 
+associated areas:
 ```
 node[name=%22" + cityName + "%22][%22is_in%22~%22" + stateName + "%22];foreach(out;is_in;out;);
 ```
-		
+
+Then get the relation ID from the area ID by subtracting 3600000000 from it.
+
 To get the relation from its ID:
 ```
 (relation(" + relationID + ");>;);out;
