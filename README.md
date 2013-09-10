@@ -27,7 +27,7 @@ A few small utilities.
 
 ### relation-in-order.js
 This JavaScript gets the boundary relation specified and constructs an
-array of paths. These paths consists of the nodes that are latitude 
+array of paths. These paths consist of the nodes that are latitude 
 and longitude points on the boundary.
 
 Please see the Overpass background section for a discussion on relations,
@@ -73,8 +73,8 @@ into our paths in the correct order.
 
 The Overpass QL is used to query the Overpass API. Because the OSM data is 
 incosistently labeled I have two sets of queries to find the correct area. 
-These could certainly be tweaked or added to as I know they don't work all 
-the time.
+These could certainly be tweaked/changed as I know they don't work all 
+the time. See bugs section for more details.
 
 Query directly for the area:
 ```
@@ -112,7 +112,7 @@ Right now, this is more of a starting point, more work must be done to fix
 the queries to get the data for cities that are available but aren't found.
 An example is Houston, TX.
 
-There are still a few issues with drawing polygons as it seems to mess up
-occasionally. Currently, I am only aware of issues with San Antonio and I 
-believe this is becuase it is messing up on some of the holes (or in OSM
-terminology the inner ways of the boundary relation).
+There are still a few issues with drawing polygons with Google Maps as it 
+seems to mess up occasionally. Currently, I am only aware of issues with 
+San Antonio and I believe this is becuase it is messing up on some of the 
+holes (or in OSM terminology, the inner ways of the boundary relation).
